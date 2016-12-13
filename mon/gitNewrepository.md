@@ -1,6 +1,6 @@
 ## Git repository 설정
 
-[refer](http://stackoverflow.com/questions/10183724/list-of-remotes-for-a-git-repository)
+[refer](http://stackoverflow.com/questions/1484648/how-to-migrate-git-repository-from-one-server-to-a-new-one)
 
 ```
 -git remote -v
