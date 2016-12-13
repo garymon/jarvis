@@ -18,3 +18,5 @@ git config hooks.slack.icon-emoji ':twisted_rightwards_arrows:'
 git config hooks.slack.repo-nice-name 'My Awesome Repository'
 git config hooks.slack.show-only-last-commit true
 git config hooks.slack.show-full-commit true
+
+test
