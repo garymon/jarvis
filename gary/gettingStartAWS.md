@@ -21,6 +21,7 @@ Free Tier
     - SUSE Linux : root, ec2-user
 
 
+
 - 초기 필요 패키지 설치 (ubuntu 기준)
   - git
     - sudo apt-get install git
@@ -45,5 +46,10 @@ Free Tier
     - sudo apt-get install oracle-java8-installer
 
 - Ubuntu Cron 설정
-  - sudo vi crontab
+  - sudo vi /etc/crontab
   - sudo service cron reload
+
+- TimeZone 설정.
+  - 처음 인스턴스를 생성하면 UTC 시간대로 설정되어 있음. 이를 한국 시간대로 변경.
+  - ls /usr/share/zoneinfo 에서 표준 시간대 파일을 찾음 or timedatectl list-timezone
+  - 한국의 경우 sudo timedatectl set-timezone Asia/Seoul   
