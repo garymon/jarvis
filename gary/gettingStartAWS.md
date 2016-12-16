@@ -21,29 +21,29 @@ Free Tier
     - SUSE Linux : root, ec2-user
 
 
-  - 초기 필요 패키지 설치 (ubuntu 기준)
-    - git
-      - sudo apt-get install git
-    - python
-      - prerequisite
-        - sudo apt-get install build-essential checkinstall
-        - sudo apt-get install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
-      - python download
-        - wget https://www.python.org/ftp/python/2.7.12/Python-2.7.12.
-      - unzip and install
-        - tar xzf Python-2.7.12.tgz
-        - sudo ./configure (unzip한 python 디렉토리에서 해야함. 각종 파일들이 생성됨)
-        - sudo make altinstall
-        - python --version
-      - pip 설치
-        - sudo apt-get install python-pip
-      - virtualenv 설치
-        - sudo pip install virtualenv
-    - java
-      - sudo add-apt-repository ppa:webupd8team/java
-      - sudo apt-get update
-      - sudo apt-get install oracle-java8-installer
+- 초기 필요 패키지 설치 (ubuntu 기준)
+  - git
+    - sudo apt-get install git
+  - python
+    - prerequisite
+      - sudo apt-get install build-essential checkinstall
+      - sudo apt-get install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
+    - python download
+      - wget https://www.python.org/ftp/python/2.7.12/Python-2.7.12.
+    - unzip and install
+      - tar xzf Python-2.7.12.tgz
+      - sudo ./configure (unzip한 python 디렉토리에서 해야함. 각종 파일들이 생성됨)
+      - sudo make altinstall
+      - python --version
+    - pip 설치
+      - sudo apt-get install python-pip
+    - virtualenv 설치
+      - sudo pip install virtualenv
+  - java
+    - sudo add-apt-repository ppa:webupd8team/java
+    - sudo apt-get update
+    - sudo apt-get install oracle-java8-installer
 
-  - Ubuntu Cron 설정
-    - sudo vi crontab
-    - sudo service cron reload
+- Ubuntu Cron 설정
+  - sudo vi crontab
+  - sudo service cron reload
