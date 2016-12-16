@@ -46,8 +46,8 @@ Free Tier
     - sudo apt-get install oracle-java8-installer
 
 - Ubuntu Cron 설정
-  - sudo vi /etc/crontab
-  - sudo service cron reload
+  - crontab -l (리스트)
+  - crontab -e (수정)
 
 - TimeZone 설정.
   - 처음 인스턴스를 생성하면 UTC 시간대로 설정되어 있음. 이를 한국 시간대로 변경.
