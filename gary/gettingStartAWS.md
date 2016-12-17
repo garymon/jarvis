@@ -48,6 +48,7 @@ Free Tier
 - Ubuntu Cron 설정
   - crontab -l (리스트)
   - crontab -e (수정)
+  - timezone을 재설정 했을 경우 cron 을 재시작 해줘야 한다. sudo service cron restart
 
 - TimeZone 설정.
   - 처음 인스턴스를 생성하면 UTC 시간대로 설정되어 있음. 이를 한국 시간대로 변경.
