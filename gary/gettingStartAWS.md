@@ -53,4 +53,13 @@ Free Tier
 - TimeZone 설정.
   - 처음 인스턴스를 생성하면 UTC 시간대로 설정되어 있음. 이를 한국 시간대로 변경.
   - ls /usr/share/zoneinfo 에서 표준 시간대 파일을 찾음 or timedatectl list-timezone
-  - 한국의 경우 sudo timedatectl set-timezone Asia/Seoul   
+  - 한국의 경우 sudo timedatectl set-timezone Asia/Seoul  
+
+- RDS 생성
+  - 관계형 db service
+  - 그냥 생성하고 security group에 inbound 수정한후 연결하면 됨.
+  - 초기에 mysql의 collation은 default로 latin이다. (빡침)
+    - AWS console에서 parameter Group을 생성 -> charset을 전부다 utf8로 바꾼 그룹을 생성한다.
+    - instance를 선택하고 instance Action에서 modify -> parameter Group을 변경된걸로 설정.
+    - instance Action에서 reboot해줘야함.
+    - 테이블도 새로 생성해야함.
