@@ -1,5 +1,5 @@
 ## Docker Tutorial
-  ### 1. Introduce
+### 0. Introduce
   * 오픈소스 컨테이너 가상화 플랫폼
   * 3가지의 구성 요소
     * Docker 이미지
@@ -151,6 +151,6 @@ EXPOSE 443
   * 이미지 올리기
     * docker push <Docker Hub 사용자 계정>/<레포지토리 명>:<태그>
       * 태그를 지정하지 않으면 latest로 올라감
-      
+
 
   출처 [http://pyrasis.com/Docker/Docker-HOWTO](http://pyrasis.com/Docker/Docker-HOWTO)
