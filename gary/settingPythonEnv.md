@@ -2,7 +2,7 @@
 
 - 파이썬 설치
   - 파이썬2
-    - window : msi파일 다운 후 설치 [링크]([https://www.python.org/ftp/python/2.7.10/python-2.7.10.msi)
+    - window : msi파일 다운 후 설치 [링크](https://www.python.org/ftp/python/2.7.10/python-2.7.10.msi)
     - Linux : 기본적으로 설치되어 있다. python -V 버전확인
   - 파이썬3
     - mac : 설치 패키지 다운로드 해서 설치 3.6.0[링크](https://www.python.org/ftp/python/3.6.0/python-3.6.0-macosx10.6.pkg)
