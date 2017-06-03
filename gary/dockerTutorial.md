@@ -44,6 +44,11 @@
   * 현재 컨테이너 목록
     * `docker ps`
       * -a : 죽은 컨테이너까지 포함해서 출력
+  * Docker를 Daemon으로 실행 한후 접근하기
+    * 생성
+      * `docker run -td --name 컨테이너id 이미지`
+    * 접근
+      * `docker exec -it 컨테이너id`
   * 종료된 컨테이너 다시 실행
     * `docker start 컨테이너id`
   * 컨테이너를 재부팅
@@ -154,3 +159,19 @@ EXPOSE 443
 
 
   출처 [http://pyrasis.com/Docker/Docker-HOWTO](http://pyrasis.com/Docker/Docker-HOWTO)
+
+### 7. Linux서버에 설치된 Docker에 외부에서 직접 연결하기!
+  * docker를 daemon으로 띄운다!
+    * docker run -td --name <컨테이너 이름> -p 1234:1234 <이미지> /bin/bash
+      * -td : ttymode, daemon으로 실행
+      * -p : port forwarding. docker-proxy 프로세스가 실행되면서 docker host에 해당 포트로 들어오는 통신을 container로 전달한다.
+    * docker에 접속후 ssh 설치 및 ssh 실행. 1234포트로 ssh실행
+      * ubuntu의 경우
+        * apt-get update
+        * ssh server설치 : apt-get install openssh-server
+        * ssh config변경 : vi /etc/ssh/sshd_config의 Port 22 변경. (root로 접근하기 위해서는 PermitRootLogin yes로 설정)
+        * ssh service 실행 : service ssh start
+        * root passwd 설정 : passwd
+    * 외부에서 docker container로 바로 ssh접근
+      * ssh -p 1234 root@{docker host ip}
+      * 이후에 root비밀번호를 입력하고 접근한다.
