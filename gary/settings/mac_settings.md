@@ -2,6 +2,35 @@
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
+# Install node
+```
+#nvm install
+curl -o- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+#install node and use
+nvm install node
+nvm use node
+nvm install node --lts
+nvm use node --lts
+```
+#Install python
+```
+#pyenv install
+brew install pyenv
+#pyenv virtualenv install
+brew install pyenv-virtualenv
+#set bash_profile
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile
+echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile
+echo 'eval "$(pyenv init -)"' >> ~/.bash_profile
+source ~/.bash_profile
+echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bash_profile
+#install python
+pyenv install 2.7.13
+pyenv shell 2.7.13
+pyenv virtualenv 2.7.13 env
+pyenv activate env
+```
+
 # terminal setting
 ### prompt
 * install git prompt
