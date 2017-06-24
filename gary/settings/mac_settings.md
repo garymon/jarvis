@@ -27,6 +27,7 @@ echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bash_profile
 #install python
 pyenv install 2.7.13
 pyenv shell 2.7.13
+#activate
 pyenv virtualenv 2.7.13 env
 pyenv activate env
 ```
