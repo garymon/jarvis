@@ -17,3 +17,4 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 alias ls='ls -lGH'
 alias ll="ls -al"
 ```
+aa
