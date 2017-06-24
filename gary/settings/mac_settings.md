@@ -18,6 +18,7 @@ DEFAULT="\[\033[00m\]"
 MAGENTA="\[\033[0;35m\]"
 YELLOW="\[\033[0;33m\]"
 BLUE="\[\033[34m\]"
+LIGHT_BLUE="\[\033[01;34m\]"
 LIGHT_GRAY="\[\033[0;37m\]"
 CYAN="\[\033[0;36m\]"
 GREEN="\[\033[0;32m\]"
@@ -26,19 +27,10 @@ export LS_OPTIONS='--color=auto'
 export CLICOLOR='Yes'
 export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 
-GIT_PS1_SHOWDIRTYSTATE=true
-GIT_PS1_SHOWUPSTREAM="auto verbose legacy name"
-
-git_status_color() {
-  if [[ $(__git_ps1) =~ \**$ ]]
-    then echo "$YELLOW"
-  elif [[ $(__git_ps1) =~ \+*$ ]]
-    then echo "$MAGENTA"
-  else echo "$CYAN"
-  fi
-}
-
-export PS1=" $GREEN_BOLD\u@\h$DEFAULT \[\033[01;34m\]\w$DEFAULT$(git_status_color)$(__git_ps1)$DEFAULT $ "
+export GIT_PS1_SHOWCOLORHINTS=1
+export GIT_PS1_SHOWDIRTYSTATE=true
+export GIT_PS1_SHOWUPSTREAM="auto verbose legacy name"
+export PROMPT_COMMAND='__git_ps1 " $GREEN_BOLD\u@\h$DEFAULT $LIGHT_BLUE\w$DEFAULT" "\\\$ "'
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 alias ls='ls -lGH'
