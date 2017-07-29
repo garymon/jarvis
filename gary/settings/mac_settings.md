@@ -30,6 +30,19 @@ pyenv shell 2.7.13
 #activate
 pyenv virtualenv 2.7.13 env
 pyenv activate env
+
+#prompt setting
+function virtual_env_name() {
+        if [ ! "${VIRTUAL_ENV}" == "" ]
+        then
+                ENV=`basename $VIRTUAL_ENV`
+                echo "(${ENV}) "
+        else
+                echo ""
+        fi
+}
+
+PS1="`virtual_env_name` $PS1"
 ```
 
 # terminal setting
