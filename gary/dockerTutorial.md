@@ -34,11 +34,13 @@
   * 받은 Image 확인
     * `docker images`
   * 컨테이너 생성/ 실행
-    * `docker run -i -t --name test-ubuntu ubuntu /bin/bash`
+    * `docker run -it --name test-ubuntu ubuntu /bin/bash`
       * -i : interactive모드
       * -t : tty 모드, 실행된 Bash Shell에 입력 및 출력이 가능
+      * -d : daemon 실행
       * -v : 호스트와 공유할 디렉토리 지정, -v /root/data:/data => 호스트의 /root/data를 docker 컨테이너의 /data 디렉터리에 연결
       * --name : 컨테이너 이름(docker 명령어에서 컨테이너id대신 사용)
+      * --restart always: 죽었을시 재시작.
       * ubuntu : 대상 이미지
       * /bin/bash : 컨테이너 생성이 완료되면 실행할 파일
   * 현재 컨테이너 목록
@@ -118,6 +120,7 @@ EXPOSE 443
       * hello:0.2 : 이미지이름:태그
         * docker hub에 올리기 위해서는 대상repository명:tag로 commit한다.
         * jgy0726/test:ubuntu-git
+        * repository명에는 대문자가 불가능함.
 
   * 변경 사항 조회
     * `docker diff 컨테이너 이름`
