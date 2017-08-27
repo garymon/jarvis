@@ -35,7 +35,7 @@ def login():
         return redirect(url_for('index'))
 
 @app.route('/oauth2/google')
-def loginWithGoogle():
+def login_with_google():
     if 'credentials' not in session:
         return redirect(url_for('oauth_callback'))
     credentials = client.OAuth2Credentials.from_json(session['credentials'])
@@ -74,7 +74,7 @@ def oauth_callback():
         auth_code = request.args.get('code')
         credentials = flow.step2_exchange(auth_code)
         session['credentials'] = credentials.to_json()
-        return redirect(url_for('loginWithGoogle'))
+        return redirect(url_for('login_with_google'))
 
 ```
 
