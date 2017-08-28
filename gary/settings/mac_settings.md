@@ -9,7 +9,7 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | ba
 #install node and use
 nvm install node
 nvm use node
-nvm install node --lts
+nvm install --lts
 nvm use node --lts
 ```
 #Install python
