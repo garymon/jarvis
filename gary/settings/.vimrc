@@ -20,6 +20,7 @@ set laststatus=2 " 상태바 표시 항상
 set shiftwidth=4 " 자동 들여쓰기 너비 설정
 set showmatch " 일치하는 괄호 하이라이팅
 set smartcase " 검색시 대소문자 구별
+set expandtab " 탭대신 스페이스
 set smarttab
 set smartindent
 set softtabstop=4
