@@ -1,6 +1,7 @@
 ## GPG
  * 태그나 커밋에 secret key를 이용해 서명하는 기능
-
+ * 현재 몇몇 유명한 오픈소스 프로젝트(e.g apache project)에서는 signing된 커밋만을 merge해주는 정책을 적용하고 있다.
+ 
 ## 방법
  1. key 생성
   * gpg --gen-key
