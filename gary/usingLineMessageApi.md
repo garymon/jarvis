@@ -51,7 +51,6 @@ amazonaws.com happens to be on the blacklist Let's Encrypt uses for high-risk do
 AWS Certificate Manager를 통해 가능.
 ** 하지만 SSL인증서를 받기 위해서는 domain이 필요하다
   - amazonaws.com 도메인으로는 신청 불가능 함!!!.
-
-  - 도메인을 사던가 
+  - 도메인을 사던가 해라
 
 ~~포기~~
