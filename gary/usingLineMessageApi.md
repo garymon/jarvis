@@ -43,16 +43,15 @@ letscrypt로 무료 SSL인증서 발급하기
    - ./letsencrypt-auto certonly --manual
 
 
-~~아마존 AWS에서는 사용 불가능 하다(ㅅㅂ)~~
+### AWS에 SSL인증서 설치. - 아마존 AWS에서는 사용 불가능 하다
+
 ```
 amazonaws.com happens to be on the blacklist Let's Encrypt uses for high-risk domain names (i.e. phishing targets, etc.).
 ```
-
-### AWS에 SSL인증서 설치.
-
 AWS Certificate Manager를 통해 가능.
 ** 하지만 SSL인증서를 받기 위해서는 domain이 필요하다
   - amazonaws.com 도메인으로는 신청 불가능 함!!!.
 
+  - 도메인을 사던가 
 
 ~~포기~~
