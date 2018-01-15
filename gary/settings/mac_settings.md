@@ -2,6 +2,40 @@
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
+# Install iterm2
+ - https://www.iterm2.com/downloads.html
+ 
+# Install zsh
+```
+brew install zsh
+```
+# Install on-my-zsh
+```
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+then edit ~/.zshrc -> ZSH_THEME="powerlevel9k/powerlevel9k"
+
+# Download fonts
+ - view raw
+ - https://github.com/powerline/fonts/blob/master/Meslo%20Slashed/Meslo%20LG%20M%20Regular%20for%20Powerline.ttf
+ - set fonts in iterm2
+
+# Install zsh theme powerlevel9k
+```
+git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+```
+# set syntax highlighting
+```
+brew install zsh-syntax-highlighting
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+```
+# iterm2 theme - tomorrow 
+```
+https://github.com/chriskempson/tomorrow-theme.git
+```
+
+ - ref : https://gist.github.com/kevin-smets/8568070
+
 # Install node
 ```
 #nvm install
