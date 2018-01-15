@@ -1,5 +1,5 @@
 ## colorscheme kolor
-  * curl https://raw.githubusercontent.com/zeis/vim-kolor/master/colors/kolor.vim > ~/.vim/colors
+  * curl https://raw.githubusercontent.com/zeis/vim-kolor/master/colors/kolor.vim > ~/.vim/colors/kolor.vim
 
 ## vimrc
 set hlsearch " 검색어 하이라이팅
