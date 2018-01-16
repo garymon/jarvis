@@ -44,6 +44,8 @@ if has("syntax")
  syntax on
 endif
 " 컬러 스킴 사용
-colorscheme kolor
+syntax enable
+set background=dark
+colorscheme Tomorrow-Night-Bright
 set guifont=Monaco:h10 noanti
 ```
