@@ -1,6 +1,7 @@
 ## colorscheme kolor
   * curl https://raw.githubusercontent.com/zeis/vim-kolor/master/colors/kolor.vim > ~/.vim/colors/kolor.vim
   * https://github.com/altercation/vim-colors-solarized.git
+  * https://github.com/chriskempson/tomorrow-theme.git
 
 ## vimrc
 set hlsearch " 검색어 하이라이팅
