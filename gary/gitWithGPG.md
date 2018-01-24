@@ -4,9 +4,18 @@
  
 ## 방법
  1. key 생성
-  * gpg --gen-key
+  * gpg --full-generate-key
+  * RSA and RSA.
+  * 4096
+  * name, email
+  * passphrase
  2. key export
-  * gpg --list-keys에서 보이는 pub key의 id를 가지고
+  * gpg --list-secret-keys --keyid-format LONG 에서 보이는 pub key의 id를 가지고
+  ```
+  sec   4096R/<id> 2016-03-10 [expires: 2017-03-10]
+uid                          Hubot 
+ssb   4096R/42B317FD4BA89E7A 2016-03-10
+  ```
   * gpg --armor --export <id> 를 입력
   * -----BEGIN PGP PUBLIC KEY BLOCK-----부터 -----END PGP PUBLIC KEY BLOCK----- 까지 복사
  3. git 계정에 key add
