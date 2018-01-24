@@ -16,9 +16,26 @@
   * git config --global user.signingkey <id>
  5. commit 에 -S 옵션으로 signing 추가.
   
+## 이슈
+ * mac 에서 초기 commit -S로 커밋을 할 때 아래와 같은 에러가 발생.
+ ```
+ error: gpg failed to sign the data
+ fatal: failed to write commit object
+ ```
+ * 해결방법
+ ```
+ brew upgrade gnupg  # This has a make step which takes a while
+brew link --overwrite gnupg
+brew install pinentry-mac
+echo "pinentry-program /usr/local/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf
+killall gpg-agent
+echo "test" | gpg --clearsign  # on linux it's gpg2 but brew stays as gpg
+git config --global gpg.program gpg  # perhaps you had this already? On linux maybe gpg2
+ ```
 
   refer : 
    * https://help.github.com/articles/generating-a-new-gpg-key/
    * https://help.github.com/articles/adding-a-new-gpg-key-to-your-github-account/
    * https://help.github.com/articles/telling-git-about-your-gpg-key/
    * https://help.github.com/articles/signing-commits-using-gpg/
+   * https://stackoverflow.com/questions/39494631/gpg-failed-to-sign-the-data-fatal-failed-to-write-commit-object-git-2-10-0
