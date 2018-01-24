@@ -11,6 +11,9 @@
   * -----BEGIN PGP PUBLIC KEY BLOCK-----부터 -----END PGP PUBLIC KEY BLOCK----- 까지 복사
  3. git 계정에 key add
   * https://github.com/settings/keys 에서 add GPG key에 붙여넣기
+ 4. git config에 signingkey 추가.
+  * git config user.signingkey <id>
+  * git config --global user.signingkey <id>
  4. commit 에 -S 옵션으로 signing 추가.
   
 
