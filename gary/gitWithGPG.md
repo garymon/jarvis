@@ -14,7 +14,7 @@
  4. git config에 signingkey 추가.
   * git config user.signingkey <id>
   * git config --global user.signingkey <id>
- 4. commit 에 -S 옵션으로 signing 추가.
+ 5. commit 에 -S 옵션으로 signing 추가.
   
 
   refer : 
