@@ -20,3 +20,5 @@
   refer : 
    * https://help.github.com/articles/generating-a-new-gpg-key/
    * https://help.github.com/articles/adding-a-new-gpg-key-to-your-github-account/
+   * https://help.github.com/articles/telling-git-about-your-gpg-key/
+   * https://help.github.com/articles/signing-commits-using-gpg/
