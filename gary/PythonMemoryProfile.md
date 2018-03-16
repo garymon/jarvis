@@ -2,7 +2,7 @@
   - 도구 설치
     - pyrasite
       - docs
-       - http://pyrasite.readthedocs.io/en/latest/
+        - http://pyrasite.readthedocs.io/en/latest/
       - pip로 설치
         - pip install pyrasite
       - git clone으로 설치
@@ -16,7 +16,7 @@
       - 설치되는 payload들
         - pyrasite를 설치하면 기본적으로 제공되는 payload(python파일들)들이 있다. (직접 작성하지 않아도 바로 테스트 가능)
         - dump_memory.py
-          - pyrasite <pid> dump_memory.py 로 바로 실행이 가능하다.
+          - pyrasite \<pid\> dump_memory.py 로 바로 실행이 가능하다.
         - 추가적인 payload는 https://github.com/lmacken/pyrasite/tree/master/pyrasite/payloads 에서 확인 가능.
      - meliae
         - 개발자 블로그
@@ -34,7 +34,7 @@
 
   - 사용법 및 트러블 슈팅.
     - 기본적으로 pyrasite-shell을 통해서 process에 연결한 다음 meliae로 memory분석을 진행했다.
-    - pyrasite-shell <pid>
+    - pyrasite-shell \<pid\>
     - meliae loader를 통해서 리턴된 객체가 가지는 함수들은 아래의 github에서 확인할 수 있음.
       - https://github.com/isaacl/meliae/blob/master/meliae/loader.py#L201
     - 메모리를 분석할때 사용한 python 코드들.
