@@ -80,4 +80,8 @@
     - pyrasite-shell로 연결해서 python shell명령어를 날리는데 process와 통신하는데 timeout이 기본적으로 짧게 설정되어 있음.
       그래서 조금이라도 긴 작업이 돌면(meliae로 분석해야 할 메모리가 크다거나..) 바로 timeout에러가 발생하는데 이는 export PYRASITE_IPC_TIMEOUT=60이렇게 환경 변수를 지정함으로써
       해결할수 있을것 처럼 github에 소스가 작성되어 있다. 하지만 pip로 받을수 있는 최신 버전은 해당 환경변수가 적용이 안된 버전이므로 git clone으로 설치하여 source를 수정하거나 해야 한다.
+       - https://github.com/lmacken/pyrasite/blob/bc40e72776b025ce02982b680a6d2a3682a992e2/pyrasite/main.py#L95
+       - 위와 같은 소스가 있긴 하지만 pip로 설치되는 버전에는 적용이 되어 있지 않다.
+       - https://github.com/lmacken/pyrasite/blob/bc40e72776b025ce02982b680a6d2a3682a992e2/pyrasite/ipc.py#L67
+       - 여기에서 그냥 timeout이 5로 잡혀있는거를 마음대로 늘려서 사용하면 된다. 직접 할때에는 240으로 주고 시도했음.
     - 한번 pyrasite-shell을 붙고 난 이후 종료하고 다시 붙게되면 memory를 dump떳을때 이전 작업에 사용되던 meliae object들이 남아있어서 제대로 분석이 불가능할 수 있다.
