@@ -113,3 +113,7 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 alias ls='ls -lGH'
 alias ll="ls -al"
 ```
+
+### keyboard 입력 소스 shift + space로 설정.
+ - karabiner로 아무 키나 f13으로 바인딩 한 다음 system reperence에 input source short cut을 f13으로 설정한다.
+ - btt로 shift + space를 f13에 바인딩 한다.
